@@ -5,8 +5,8 @@ Specifically, it first parsed xml files to acquire coordinate data and image lab
 The segmented images were defined as training data and testing data by inputting a specified proportion parameter; each image was located under a subfolder named with its class.
 Then these processed data was directly applied with deep learning model. 
 ### Model Design
-Convolutional Neural Network is widely applied in pattern recognition and image classification, which is a good fit for this project. 
-Considering dataset size and expertize constraint, I did not take overly complex model into account, only designed a classical, simple CNN model and mainly focused on some optimization tricks including data augmentation and parameter tuning. 
+Convolutional Neural Network is widely applied in pattern recognition and image classification, which is a good fit for this project.
+Considering dataset size, I did not take overly complex model into account, only designed a classical, simple CNN model and mainly focused on some optimization tricks including data augmentation and parameter tuning. 
 As for the model, Conv1 consists of 32 filters, both kernel size and stride of which are 1 by 1, Relu is applied as activation function. 
 Conv2 is similar to Conv1, while kernel size is enlarged into 3 by 3, a max-pooling layer with 2 by 2 is connected after convolution layer for subsampling. 
 Conv3 and Conv4 reduce filter size to 16, 8 with kernel size 3 by 3 and 5 by 5, respectively. Both two layer consider Relu as activation function, and Conv4 is connected with max-pooling layer.
@@ -25,7 +25,7 @@ During the process of training model, I took categorical_crossentropy as loss fu
 After experiencing 30 rounds' epochs, the model performed on testing data with loss = 0.8542 and accuracy = 0.7520.
 ### Further Consideration
 From the plotting charts, overwriting still exists to some extent in spite of some normalization measurements, which should be a possible direction of further optimization.
-More domain knowledge is required, which can applied in data preprocessing and image augmentation, because it is also hard to recognize raw images even with a manual involvement, this might be one reason why the performance is not that adorable. 
-Eventually, constrained by current methodology's level and time, I did not use any customized APIs, if possible in future, a case-by-case implementation is expected to be conducted on some a topic.
+More domain knowledge is required, which can applied in data preprocessing and image augmentation, because it is also hard to recognize and classify raw images even involved with eyes, this might be one reason why the performance is not that adorable. 
+Eventually, constrained by current expertise's level and time, I did not use any customized APIs, if possible in future, a case-by-case implementation is expected to be conducted on some a topic.
 ### Declaration
 As promised, I keep all experimental data private, and all codes, analysis were 100% conducted personally, beyond google search.
